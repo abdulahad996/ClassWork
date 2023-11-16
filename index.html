@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        h1 {text-align: center;}
+        form {text-align: center;}
+        h2 {text-align: center;}
+    
+    </style>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+        <h1 class="drop-in"> Apple Store</h1> 
+        <h2 class="drop-in2">Contact Form</h2>
+        <div style="text-align: center;">
+        <img src="download4.png"class="center" width="300">
+    
+        </div>
+        <form method="get" action="#"> 
+            <p> <strong>Name:</strong> <input type="text" name="name"id="name"></p>
+            <p><strong> Mobile Num:</strong> <input type="number" name="number" id="number"></p>
+        <p> <strong>Email :</strong><input type="email" name="email"id="email" required></p>
+        <p><strong>Password:</strong> <input type="Password" name="Password" id="password" ></input></p>
+        <input type="button" value="Save" onclick="saveClientData()" />
+        
+        <br>
+        <br>
+        <hr>
+        <video src="https://media.istockphoto.com/id/1455772765/video/waterfall-with-fresh-water-in-the-romantic-and-idyllic-tropical-jungle-rainforest-blue.mp4?s=mp4-640x640-is&k=20&c=-ufHs0M4TG0HCyntsf3RwpHP08EEtAlSv8APcZe6Ciw="control></video>
+
+
+        <br>
+        <br>
+        <hr>
+       
+
+    </form>
+    <script>
+      var clientData = [];
+      
+      var client = {
+        name:"",
+        number:0,
+        email:"",
+      };
+      function saveClientData() {
+        var name = document.getElementById("name").value
+        var number = document.getElementById("number").value
+        var email = document.getElementById("email").value
+
+      clientData.push({
+        name:name,
+        number:number,
+        email:email,
+      });
+
+      }
+     renderClientData();
+     resetFields();
+     alert("your form has been submitted")
+
+
+     function renderClientData(){
+      var htmlData= "";
+
+      clientData.forEach((value, index) => {
+          htmlData +=
+          `<div style="display: flex; width: 100%; justify-content: space-around;">
+                <div>
+                  ` +
+            value.name +
+            `
+                </div>
+                <div>
+                  ` +
+            value.number +
+            `
+                </div>
+                <div>
+                  ` +
+            value.email +
+            `
+                </div>
+                <div>
+                  <button>Edit</button>
+                  <button>Delete</button>
+                </div>
+              </div>`;
+        });
+        document.getElementById("finalResult").innerHTML = htmlData;
+     }
+     debugger;
+      function resetFields() {
+        var i = 0;
+        while (i < fields.length) {
+          document.getElementById(fields[i]).value = "";
+          i++;
+        }
+      }
+    
+    </script>
+    
+</body>
+</html>

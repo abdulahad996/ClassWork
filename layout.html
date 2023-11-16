@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+       
+  <head>
+    <link href="index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+      }
+      .header {
+        justify-content: space-between;
+        display: flex;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .menu {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 800px) {
+        .menu {
+          display: none;
+        }
+
+        .mob-btn {
+          display: block !important;
+        }
+      }
+
+      .mob-btn {
+        display: none;
+      }
+
+      .mob-menu {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        gap: 40px;
+        margin-top: 50%;
+        justify-content: flex-start;
+      }
+
+      .sidebar {
+        display: none;
+        flex-direction: column;
+      }
+
+      .navBtn:checked ~ .sidebar {
+        transform: translateX(0);
+        position: fixed;
+        height: 100%;
+        width: 40%;
+        background-color: white;
+        display: flex !important;
+        z-index: 9999;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        flex-direction: column;
+        transition: all 0.3s ease-out;
+      }
+
+      .navBtn:checked ~ .sidebar div {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.6s ease-out;
+      }
+
+      .navBtn {
+        /* display: none; */
+      }
+
+      .main-content {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: repeat(auto-fill, 150px);
+        justify-items: center;
+      }
+      .item {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <img width="150px" src="https://w7.pngwing.com/pngs/285/418/png-transparent-microsoft-edge-web-browser-logo-microsoft-blue-text-trademark.png" />
+      </div>
+      <div class="mob-btn">
+        <label for="navBtn">
+          <i class="fa fa-bars"> </i>
+        </label>
+      </div>
+
+      <div class="menu">
+        Wahdwahda wda
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Services</div>
+        <div>Contact Us</div>
+      </div>
+    </div>
+    <input type="checkbox" class="navBtn" id="navBtn" />
+    <div class="sidebar">
+      <div class="mob-menu">
+        Wahdwahda wda
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Services</div>
+        <div>Contact Us</div>
+      </div>
+    </div>
+    <!-- <div class="main-content">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div> -->
+
+    <div class="center-div">
+      <h1>Hellow everyone</h1>
+      <h1>Welcome to html class</h1>
+      <!-- <form method="GET" action="form-submission.html"> -->
+      <form method="GET" action="#">
+        <input type="text" name="name" placeholder="write your name" tabindex="1" />
+        <input type="email" name="email" placeholder="write your email" tabindex="1" />
+        <input type="number" name="phone" placeholder="write your phone" tabindex="1" />
+        <textarea name="message"></textarea>
+        <input type="submit" value="Save" />
+      </form>
+
+      <!-- ./ current directory -->
+      <!-- ../ previous directory -->
+      <!-- ../../ previous directory ki previous directory -->
+      <img src="../images/power automate.png" tabindex="2" />
+      <br />
+      <img src=../images/power bi.png"/>
+
+      <video width="auto" height="240" controls>
+        <source src="images/movie.mp4" type="video/mp4" />
+        <source src="./images/movie.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <h1>Test this will be black</h1>
+  </body>
+</html>
+</body>
+</html>
